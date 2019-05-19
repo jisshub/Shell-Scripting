@@ -9,7 +9,7 @@
 
 
 # VARIABLES
-# variables r uppercase b convention. not mandatory.
+# variables r uppercase since it s a  convention. not mandatory.
 # letters numbers and undercsores are allowed.
 # NAME='Avengers'
 # DATE='12-05-2019'
@@ -79,7 +79,7 @@
 # fi
 
 
-# COMPARISONS
+# **COMPARISONS**
 
 # -eq :- returns true if values are equal.used instead of '=='
 # read -p "Enter two numbers:" NUM1 NUM2
@@ -122,6 +122,52 @@
 #     echo "$NUM2 IS SMALLER"
 # fi
 
+# -ge :- returns True if num1 >= num2 else returns false.
+# read -p "Enter two numbers: " NUM1 NUM2
+# echo $NUM1 $NUM2
+# if [ "$NUM1" -ge "$NUM2" ]
+# then
+#     echo "$NUM1 IS GREATER THAN OR EQUAL TO $NUM2"
+# else
+#     echo "Both not equal and $NUM1 not greater than $NUM2"
+# fi
+
+# -le :- returns True if num1 <= num2 else returns false.
+# read -p "Enter two numbers: " NUM1 NUM2
+# echo $NUM1 $NUM2
+# if [ "$NUM1" -le "$NUM2" ]
+# then
+#     echo "$NUM1 IS LESSER THAN OR EQUAL TO $NUM2"
+# else
+#     echo "Both not equal and $NUM1 not lesser than $NUM2"
+# fi
 
 
+# ** FILE CONDITIONS ** 
+# -f :- checking whether the given ocbject is a file or not.
+# FILE_NAME='file55'
+# if [ -f $FILE_NAME ]
+# then    
+#     echo "$FILE_NAME is a file"
+# else
+#     echo "$FILE_NAME not a file"
+# fi
 
+# -e :- whether file exists or not.
+# FILE_NAME='file33'
+# if [ -e $FILE_NAME ]
+# then
+#     echo "file exists"
+# else
+#     echo "not exists"
+# fi
+
+
+# -d :- returns true if it is a driectory else false.
+DIR_NAME='sample_dir'
+if [ -d $DIR_NAME ]
+then
+    echo "it is a directory"
+else
+    echo "not a directory"
+fi
