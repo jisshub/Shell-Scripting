@@ -164,10 +164,52 @@
 
 
 # -d :- returns true if it is a driectory else false.
-DIR_NAME='sample_dir'
-if [ -d $DIR_NAME ]
-then
-    echo "it is a directory"
-else
-    echo "not a directory"
-fi
+# DIR_NAME='sample_dir'
+# if [ -d $DIR_NAME ]
+# then
+#     echo "it is a directory"
+# else
+#     echo "not a directory"
+# fi
+
+
+# *** CASE STATEMENTS ***
+# FIRST PROMPT THE USER TO INPUT A VALUE.
+# then specify a case stmt where ANSWER put in by user satisfy any of
+# those cases echo is printed. ie if user gives- yes or YES or y or Y
+# then echo is printed. end each cases with 2 semicolons
+#  same method for 2nd case also. 
+# and if both cases doesnt match the user input.
+# then specify '*)' option which refers to 'default catch all condition'.not neccessary
+# finally end the case statement with 'esac' keyword
+
+# read -p "Are you older than 21?(Y/N):" ANSWER
+# echo $ANSWER
+# case $ANSWER in 
+#     # later add some test cases
+#     [Yy] | [Yy][Ee][Ss])
+#         echo "You Can have a beer :)"
+#         ;;
+#     [Nn] | [Nn][Oo])
+#         echo "Sorry no Beer :("
+#         ;;
+#     *)
+#         echo "Please enter correct details"
+#         ;;
+# esac
+
+
+read -p "Good Morning: " ANSWER
+# echo $ANSWER
+case $ANSWER in
+    'Good Morning')
+        echo "Thanks:)"
+    ;;
+    'Good Afternoon')
+        echo "Its Morning Sir"
+    ;;
+    *)
+        echo "Sorry Sir"
+    ;;
+esac
+
